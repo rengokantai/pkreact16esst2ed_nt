@@ -68,3 +68,12 @@ import ReactDOMServer from 'react-dom/server';
 ReactDOMServer.renderToString()
 ReactDOMServer.renderToStaticMarkup
 ```
+
+###### 103
+Notice that the ```Collection``` Component cannot directly mutate the ```Application``` component state. The ```Collection``` component has read only access to the state via a ```this.props``` object.  
+The only way to update the parent component's state is to call the callback functions that are passed by a parent component.
+
+
+###### 112
+###### 116
+Inserting a component into the DOM is called `mounting`, whereas removing a component from the DOM is called `unmounting`
