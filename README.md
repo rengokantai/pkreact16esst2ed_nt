@@ -15,6 +15,7 @@ computed after data was changed.
 - The difference between the two virtual DOM representations is what actually needs to be changed in the real DOM.
 
 
+
 #### Parameters
 ```
 React.createElement(type,props,children)
@@ -30,3 +31,29 @@ const listItemElement = createListElement({className:'ke',key:'item'},'Item1');
 React.DOM.li, React.DOM.div
 
 ## 4. Creating Your First React Component
+###### pg78
+There are two ways to pass data to a render() method using the react API
+```
+this.props
+this.state
+```
+
+It is a good practice to keep as many React components stateless as possible
+
+##### difference
+this.state, this.props
+- this.props: This stores read-only data that is passed from the parent. It belongsto the parent and cannot be changed by its 
+children. Immutable
+- this.state: Is private to the component. It can be changed by the component. The component will re-render itself when
+the state is updated
+
+
+##### setState
+```
+this.setState(prevState=>({
+  isHeaderHidden:!prevState.isHeaderHidden
+}))
+```
+
+React does not create an inline event handler in the rendered HTML markup.
+This is because React doesnot actually attach event handlers to the DOM nodes themselves
