@@ -57,3 +57,14 @@ this.setState(prevState=>({
 
 React does not create an inline event handler in the rendered HTML markup.
 This is because React doesnot actually attach event handlers to the DOM nodes themselves
+
+##### What if we move the ```isHeaderHidden``` prpoerty out of our state object
+because our ```render()``` method will not be triggered automatically by React every time
+
+
+## 5. Making Your React Components Reactive
+```
+import ReactDOMServer from 'react-dom/server';
+ReactDOMServer.renderToString()
+ReactDOMServer.renderToStaticMarkup
+```
