@@ -19,3 +19,12 @@ computed after data was changed.
 ```
 React.createElement(type,props,children)
 ```
+
+
+React.createFactory
+```
+const createListElement = React.createFactory('li');
+const listItemElement = createListElement({className:'ke',key:'item'},'Item1');
+```
+
+React.DOM.li, React.DOM.div
