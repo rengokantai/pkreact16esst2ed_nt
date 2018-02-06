@@ -77,3 +77,19 @@ The only way to update the parent component's state is to call the callback func
 ###### 112
 ###### 116
 Inserting a component into the DOM is called `mounting`, whereas removing a component from the DOM is called `unmounting`
+
+###### 118
+The `componentWillMount()` method is invoked immediately before React inserts a component into the DOM
+
+
+
+
+## 7. Updating Your React Components
+### Understanding component lifecycle updateing components
+```
+componentWillReceiveProps()
+shouldComponentUpdate()
+componentWillUpdate()
+render()
+componentDidUpdate()
+```
